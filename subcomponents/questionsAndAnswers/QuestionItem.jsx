@@ -17,15 +17,14 @@ class QuestionItem extends React.Component {
   render() {
     return (
       <div className='questionItem' >
-        <div className='question'> Q: {this.props.question.question_body}</div>
+        <div className='question'> Q: {this.props.question.question_body} </div>
+        Helpful?
+        <div className='questionYesButton'>Yes({this.props.question.question_helpfulness})</div>
         {
           Object.values(this.state).map((answer, key) => {
             return <QuestionAnswerItem answer={answer} key={key} />
           })
         }
-        <div>Helpful?
-          <div className='yesButton'>Yes({this.props.question.question_helpfulness}) </div>
-        </div>
       </div>
     )
   }
