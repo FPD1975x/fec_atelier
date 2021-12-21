@@ -6,7 +6,6 @@ class QuestionAnswerItem extends React.Component {
     super(props);
   }
   render() {
-    console.log(this.props.answer);
     return(
       <div>
         <div className='answer'>A: {this.props.answer.body}</div>
