@@ -50,13 +50,12 @@ class App extends React.Component {
   }
 
   render() {
-
     return (
       <div>
         <div>ATELIER</div>
         <Overview product={this.state.product} styles={this.state.styles}/>
         <RelatedItems />
-        <QuestionsAndAnswers />
+        <QuestionsAndAnswers productId={this.state.productId}/>
         <RatingsAndReviews />
       </div>
     )
